@@ -4,18 +4,19 @@ const nodemailer = require("nodemailer");
 
 // Configure your Gmail account
 const transporter = nodemailer.createTransport({
-  service: "outlook",
+  host: "smtp.ethereal.email",
+  service:'SMTP',
   port: 587,
   secure: false,
   auth: {
-    user: 'richiebgitcall94@gmail.com',
+    user: 'dayana.ebert17@ethereal.email',
     pass: process.env.PASSWORD,
   },
 });
 
 // Define the email options
 const mailOptions = {
-  from: "richiebgitcall94@gmail.com",
+  from: "dayana.ebert17@ethereal.email",
   to: "qwabs94@gmail.com",
   subject: "Scheduled Email",
   text: "This is an automated email sent using Node.js and Gmail.",
